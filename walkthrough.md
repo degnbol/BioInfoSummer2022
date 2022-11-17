@@ -656,7 +656,6 @@ Other popular (neo)vim plugins:
 - diff view https://github.com/sindrets/diffview.nvim
 
 ## Notes
-- There are many other git things that aren't covered here such as `git rebase`
 - Overleaf is git tracked, so you can clone and edit a shared overleaf 
   document locally in your favourite editor.
 - Track your git config itself with git in "dotfiles" https://dotfiles.github.io/

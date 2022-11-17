@@ -326,7 +326,9 @@ commits, e.g. drop one, combine (squash) two of them, edit another.
 (:cq to cancel an interactive rebase in vim).
 
 We can delete branches no longer in use.
-`git branch -d dev`
+```bash
+git branch -d dev
+```
 Note that a branch is simply a commit reference, that moves when a new 
 commit is added on top. When the branch is deleted, all its history is not simply gone
 (although if a branch is deleted that was ahead of all other branches, its 
@@ -343,7 +345,9 @@ git log --oneline --graph --branches
 We see that HEAD has moved and get a message about detached HEAD, since it is 
 not currently on a branch.
 So, we can easily move around in history, but let's go back to main.
-`git checkout main`
+```bash
+git checkout main
+```
 We've used both `git checkout` and `git switch` to jump between commits. 
 There's really no difference. Both functions exist because `git checkout` has 
 been confusing for new users, as it also covers restoring old versions of 
@@ -430,7 +434,9 @@ If you want to run `data/CSA/CSA_sites.tsv.sh` (after `cd data/CSA/`) then insta
 miller which is a handy command line tool for tables and jsons.
 
 Let's commit without specifying a message with the `-m` option.
-`git commit`
+```bash
+git commit
+```
 What happened now is git opened the default text editor so you can write the 
 commit message here instead. What we have written with `-m` so far is the 
 commit title that is written here on the first line. The next line should be 
@@ -554,7 +560,7 @@ cd -
 # add Julia to README.md requirements:
 vim README.md +/Requirements +'normal }O- Julia' +wq
 cat README.md
-git add ../src/
+git add src/
 git commit -m "initial HG work"
 git push
 ```
@@ -578,7 +584,7 @@ Relative path:
 ```bash
 # cd PROTECT_ROOT
 echo 'src/myscript.py data/CSA/CSA_sites.tsv.sh' > data/CSA/myanalysis.sh
-chmod +x data/CSA/myanalysis.sh
+chmod +x data/CSA/myanalysis.sh src/myscript.py
 ```
 Assumes it's run from project root: `./data/CSA/myanalysis.sh`.
 

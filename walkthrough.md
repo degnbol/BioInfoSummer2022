@@ -493,7 +493,7 @@ Make a repository on
 When you decided on a name and private/public GitHub is very helpful and tells you what to do next.
 Since we already have a project we need to push it to the remote, rather than `git clone` the remote.
 We add a remote that we name "origin" that points to the GitHub repo with an SSH link 
-("git@github.com:" instead of "https://github.com/").
+("git@github.com:\*.git" instead of "https://github.com/\*").
 ```bash
 git remote add origin git@github.com:USERNAME/REPO_NAME.git
 git remote -v # [v]erbose

@@ -1,9 +1,8 @@
-# git-good (git for collaborative science seminar)
-
+# Introduction to git collaboration
 BioInfoSummer 2022
+workflow instructions
 https://bis.amsi.org.au/speakers/christian-madsen/
 
-Workflow instructions complimenting slides for git presentation.
 
 ## Setup
 - Windows: https://gitforwindows.org/
@@ -121,6 +120,8 @@ git status -uno
 Or always ignore the filetype:
 ```bash
 echo '*.out' >> .gitignore
+# and on Mac .DS_Store while we're at it
+echo '.DS_Store' >> .gitignore
 git status
 git add .gitignore
 ```

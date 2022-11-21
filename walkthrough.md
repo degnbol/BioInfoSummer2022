@@ -705,6 +705,8 @@ pressing `git <TAB>+<TAB>`.
   - has option completion (try `git status -<TAB>`)
 
 ### Notes
+- There is a lot of git not covered here, e.g. checking out multiple branches 
+  at the same time with `git worktree`.
 - Overleaf is git tracked, so you can clone and edit a shared overleaf 
   document locally in your favourite editor.
 - Track your git config itself with git in "dotfiles" https://dotfiles.github.io/  

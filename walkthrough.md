@@ -91,7 +91,7 @@ those changes before committing, which we have. We always supply a [m]essage:
 ```bash
 git commit -m 'Initial analysis.'
 ```
-This command should fail if you haven't configured git before. Git takes note 
+This command should **fail** if you haven't configured git before. Git takes note 
 of the author for each commit, so as the error suggests, you can specify your 
 email and name with
 ```bash

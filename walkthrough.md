@@ -45,6 +45,8 @@ python3 myscript.py > myrun.out
 git status
 ```
 git sees the files, git doesn't care.
+
+## Staging
 ```bash
 git add experiment.log
 ```
@@ -77,7 +79,9 @@ folders. You can track that `download.sh` is executable (`chmod +x`) with
 git config --global core.filemode true
 ```
 
-We now want to save the staged changes to the project history with a [m]essage:
+## Committing
+We now want to save the changes to the project history. Note that we must stage 
+those changes before committing, which we have. We always supply a [m]essage:
 ```bash
 git commit -m 'Initial analysis.'
 ```
@@ -88,13 +92,16 @@ email and name with
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 ```
-Then rerun the commit command.
+Then rerun the commit command. If you rerun it once more, there is nothing in 
+the staging are so nothing happens.
+
+## Removing
 Now that the files are in the history we can safely remove things and clean up 
 without fear of losing work forever.
 ```bash
 rm myscript.py
 ```
-Wups, that wasn't the file we wanted to change. `git status` gives a few 
+Oops, that wasn't the file we wanted to change. `git status` gives a few 
 suggested commands, e.g. undo with `git restore`:
 ```bash
 git restore myscript.py
@@ -125,6 +132,8 @@ echo '.DS_Store' >> .gitignore
 git status
 git add .gitignore
 ```
+
+## Moving
 We may want to rename or move files to reorganise
 ```bash
 mv *.log logs/
@@ -141,6 +150,11 @@ It now understands it was renamed.
 Move/rename like above can be done with one command instead:
 ```bash
 git mv myscript.py src/
+```
+
+## Code vs data storage
+
+```
 ./download.sh
 mv *.csv data/CSA/
 git mv download.sh data/CSA/literature_pdb_residues.csv.sh
@@ -157,8 +171,10 @@ can easily be set up for anyone with ssh access.
 Git will also become slow if it contains too many files, e.g. if you run a 
 script that writes 100s or 1000s of files to a folder, consider tracking a zip 
 or tar of the folder, or other alternatives.
-Compressed files ar binary rather than plaintext, which means git no longer 
+Compressed files are binary rather than plaintext, which means git no longer 
 tracks line-by-line changes.
+
+## Branching
 
 Let's say this is a stable version of the project without bugs.
 ```bash

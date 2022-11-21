@@ -5,6 +5,9 @@
 ## Walkthrough
 https://github.com/degnbol/BioInfoSummer2022/blob/main/walkthrough.md
 
+Open a finder window.
+Open src/myscript.py to show branch switching.
+
 ## Extra time
 Open e.g. README.md with :set number
 - gitsigns (GUIs have similar)

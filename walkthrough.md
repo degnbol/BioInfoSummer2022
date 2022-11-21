@@ -79,7 +79,8 @@ mkdir -p src/ logs/ data/CSA/
 git add .
 ```
 Add files in the folder and subfolders. Notice that git only tracks files, not 
-folders. You can track that `download.sh` is executable (`chmod +x`) with
+folders.  
+You can track that `download.sh` is executable (`chmod +x`) with
 ```bash
 git config --global core.filemode true
 ```

@@ -552,9 +552,9 @@ and use their work in your own. You could `git clone` (or just download)
 - *outside* your repo and mention dependence in `README.md`.
   - Requires additional install step.
   - Assumes correct path.
-- *inside* repo. Options:
-  - ignore, e.g. with `.gitignore`.
-  - tracking every file, resulting in messy double tracking.
+- *inside* repo.
+  - Git only tracks folder name.
+  - Hide with `.gitignore`.
 
 Cool options:
 - ***Subtree***: basically git clone inside repo that your own repo understands.
